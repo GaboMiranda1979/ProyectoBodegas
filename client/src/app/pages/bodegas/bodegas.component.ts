@@ -1,30 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs/operators';
-import { MaterialModule } from 'src/app/material.module';
-import { HttpClient } from '@angular/common/http';
 import { WineryService } from 'src/app/services/winery.service';
 import { Winery } from 'src/app/model/winery';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-bodegas',
- templateUrl: './bodegas.component.html',
-  styleUrls: ['./bodegas.component.css']
+  templateUrl: './bodegas.component.html',
+  styleUrls: ['./bodegas.component.css'],
 })
+export class BodegasComponent implements OnInit {
+  wineries: Winery[] = [];
 
-  export class BodegasComponent implements OnInit {
+  constructor(private wineryService: WineryService) {}
 
-    wineries: Winery[] = [];
+  ngOnInit(): void {
+    this.getWineries();
+  }
 
-    constructor(private wineryService: WineryService) { }
-
-    ngOnInit(): void {
-      this.getWineries();
-    }
-
-   getWineries(): void {
-   this.wineryService.getWineries()
-      .subscribe(wineries=> this.wineries = wineries);
-     }
-
+  getWineries(): void {
+    this.wineryService
+      .getWineries()
+      .subscribe((wineries) => (this.wineries = wineries));
+  }
 }
