@@ -1,0 +1,26 @@
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-color: brown;
+    margin: 1rem;
+    max-width: 25rem;
+    min-height: 10rem;
+    min-width: 25rem;
+  }
+
+  .mat-card-title {
+    text-align: center;
+    text-size-adjust: inherit;
+    text-transform: uppercase;
+    line-height: 1.2;
+    background-color: aqua;
+    color: darkred;
+  }
+  .h2 {
+    color:brown;
+    text-justify: auto;
+    text-decoration: solid;
+    text-align: center;
+  }

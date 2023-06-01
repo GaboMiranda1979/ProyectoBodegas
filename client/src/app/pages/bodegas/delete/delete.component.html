@@ -1,0 +1,14 @@
+<p>delete works!</p>
+
+  <form (submit)="deleteWinery(selectedWinery)" name="deleteForm" method="POST">
+    <h1>Eliminar Bodega</h1>
+
+    <label for="bodega">Seleccione la bodega a Eliminar:</label>
+    <select [(ngModel)]="selectedWinery" name="bodega">
+      <option *ngFor="let winery of wineries" [value]="winery._id">{{ winery.name }}</option>
+    </select>
+
+    <button type="submit">Eliminar</button>
+    <button type="reset">Borrar Formulario</button>
+
+  </form>

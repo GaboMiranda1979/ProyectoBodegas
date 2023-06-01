@@ -1,0 +1,39 @@
+@media screen and (min-width: 52em) {
+  .form {
+      min-width: 52em;
+  }
+}
+
+form{
+  margin: 3em;
+  padding: 3em;
+  background-color: rgb(127, 216, 217);
+  background-size: cover;
+
+}
+label{
+  color: rgb(122, 218, 207);
+  font-size: x-large;
+  font-style:italic;
+  font-weight: bold;
+}
+
+button{
+  border: #000;
+  border-radius: 1em;
+  border-style:groove;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  width: 8em;
+  height: 3em;
+  margin: 2em;
+
+}
+h1{
+  font-size: xx-large;
+  font-weight: bold;
+  font-style: normal;
+
+}
+

@@ -1,0 +1,22 @@
+<p>form works!</p>
+<form [formGroup]="wineryForm" (ngSubmit)="addWinery()">
+  <h1>Agregar nueva Bodega</h1>
+    <label for="name">Nombre</label><br>
+    <input type="text" id="name" name="name" maxlength="60" placeholder="Nombre" formControlName="name"><br>
+    <label for="zone">Zona:
+      <select name="zone" id="zone" formControlName="zone">
+          <option value="Lujan de Cuyo">Lujan de Cuyo</option>
+          <option value="Maipu">Maipu</option>
+          <option value="Valle de Uco">Valle de Uco</option>
+          <option value="San Rafael">San Rafael</option>
+          <option value="Zona Este">Zona Este</option>
+          <option value="Otra" selected>Otra</option>
+      </select>
+  </label><br>
+
+      <br>
+    <button type="submit">Agregar Bodega</button>
+    <button type="reset">Borrar Formulario</button><br>
+
+  </form>
+
