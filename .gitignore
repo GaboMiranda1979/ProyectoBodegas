@@ -1,0 +1,4 @@
+/client/.angular/cache
+/client/node_modules/
+/server/node_modules/
+/.idea/
